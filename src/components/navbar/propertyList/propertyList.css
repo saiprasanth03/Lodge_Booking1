@@ -1,0 +1,53 @@
+.pList{
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+}
+.pListItem{
+  flex:1;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  /* min-width: 200px;
+  max-width: 200px;  */
+
+}
+
+.pListImg{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.pListTitles>h1{
+  font-size: 18px;
+  color: #444;
+  padding-top: 10px;
+  margin: 0;
+}
+
+.pListTitles>h2{
+  font-size: 14px;
+  font-weight: 300;
+
+}
+
+.homeTitle{
+    width: 1024px;
+    font-size: 20px;
+    color: black;
+    display: inline;
+}
+
+@media (max-width: 800px) {
+    .pList{
+        flex-wrap: wrap;
+    }
+    .pListItem{
+        min-width: 150px;
+    }
+}

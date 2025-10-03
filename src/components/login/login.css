@@ -1,0 +1,52 @@
+
+BODY{
+    margin: 0%;
+    background-image:url();
+    color: white;
+}
+#hey{
+    text-align: center;
+    margin: auto;
+    border: 2px solid rgb(255,255,255,0.2);
+    height: 400px;
+    width: 250px;
+    margin-top: 200px;
+    background-color: #8f99a8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+h1{
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+.india{
+    height: 30px;
+    width: 220px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: 1px solid white;
+    text-indent: 65px;
+}
+.india::placeholder{
+    color: black;
+}
+.login{
+    height: 30px;
+    width: 220px;
+    background-color: #03b1fc;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #03b1fc
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#new{
+    margin-top: 60px;
+    font-weight: 400;
+}

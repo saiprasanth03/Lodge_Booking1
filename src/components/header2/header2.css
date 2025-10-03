@@ -1,0 +1,336 @@
+
+/* ===========================
+   HEADER SECTION
+=========================== */
+.header {
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1024px;
+  margin: 20px 0 100px 0;
+}
+
+.headerList {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.headerTitle {
+  margin-top: 20px;
+}
+
+.headerDesc {
+  margin: 15px 0px;
+}
+
+.headerbtn {
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #3f71b7;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===========================
+   SEARCH BAR SECTION
+=========================== */
+.headerSearch {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.searchBar {
+  display: flex;
+  border: 2px solid #febb02;
+  border-radius: 6px;
+  background-color: white;
+  padding: 5px;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.searchInput,
+.searchDate,
+.searchOptions {
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #555;
+}
+
+.searchInput {
+  width: 200px;
+}
+
+.searchDate,
+.searchOptions {
+  cursor: pointer;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.searchDate:hover,
+.searchOptions:hover {
+  background-color: #e8e8e8;
+}
+
+.searchDate {
+  width: 220px;
+}
+
+.searchOptions {
+  min-width: 200px;
+}
+
+.searchButton {
+  background-color: #0071c2;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.searchButton:hover {
+  background-color: #005fa3;
+}
+
+/* ===========================
+   DATE PICKER DROPDOWN
+=========================== */
+.datePickerWrapper {
+  position: relative;
+}
+
+.datePickerDropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 2;
+}
+
+/* ===========================
+   OPTIONS (GUEST SELECTOR)
+=========================== */
+.optionsWrapper {
+  position: relative;
+}
+
+.optionsDropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: max-content; /* ✅ prevents stretching */
+  min-width: 220px;   /* ✅ sets a nice width */
+}
+
+.optionItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.optionText {
+  font-size: 14px;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.optionCounter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.optionBtn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #0071c2;
+  color: #0071c2;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.optionBtn:hover:not(:disabled) {
+  background-color: #0071c2;
+  color: white;
+}
+
+.optionBtn:disabled {
+  border: 1px solid #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.optionNumber {
+  font-size: 16px;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ===========================
+   SCROLLBAR STYLING
+=========================== */
+.optionsDropdown::-webkit-scrollbar {
+  width: 6px;
+}
+
+.optionsDropdown::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* ===========================
+   DROPDOWN BEHAVIOR
+=========================== */
+.datePickerWrapper,
+.optionsWrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.datePickerDropdown,
+.optionsDropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+  .headerTitle {
+    font-size: 1.6rem;
+  }
+
+  .headerDesc {
+    font-size: 0.95rem;
+  }
+
+  .searchBar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+  }
+
+  .searchInput,
+  .searchDate,
+  .searchOptions,
+  .searchButton {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .datePickerDropdown,
+  .optionsDropdown {
+    top: 60px;
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* 📱 Mobile Phones */
+@media (max-width: 480px) {
+  .headerContainer {
+    margin: 10px 0 60px 0;
+  }
+
+  .headerTitle {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .headerDesc {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .headerbtn{
+    margin-left: 35%;
+  }
+
+  .headerList {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .searchBar {
+    border: 2px solid #febb02;
+    padding: 8px;
+    width: 95%;
+  }
+
+  .searchInput,
+  .searchDate,
+  .searchOptions,
+  .searchButton {
+    width: 100%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .datePickerDropdown,
+  .optionsDropdown {
+    top: 65px;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+}

@@ -1,0 +1,63 @@
+/* ===========================
+   HEADER SECTION
+=========================== */
+.header {
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.headerContainer {
+  margin: auto;
+  width: 100%;
+  max-width: 1024px;
+  /* margin: 20px 0 100px 0; */
+}
+
+.headerList {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.headerListItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding-bottom: 5px;
+}
+
+.headerListItem.active {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+
+.headerTitle {
+  margin-top: 30px;
+}
+
+.headerDesc {
+  margin: 15px 0px;
+}
+
+.headerbtn {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3f71b7;
+  color: white;
+  cursor: pointer;
+}
+
+
+.headerSearch {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  position: relative;
+}
