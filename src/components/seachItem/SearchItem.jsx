@@ -41,7 +41,7 @@ const SearchItem = ({ img, title, distance, subtitle, features, rating, price}) 
           {/* ✅ Navigate to the hotel details page with ID */}
           <button
             className="siCheckButton"
-            onClick={() => navigate(`/hotels/${hotelId}`)}
+            onClick={({title}) => navigate(`/hotels/${hotelId}`)}
           >
             See availability
           </button>
